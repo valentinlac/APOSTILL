@@ -614,6 +614,9 @@ body{background:var(--ink);color:var(--parch);font-family:var(--f);font-weight:3
 
 @media (max-width:768px){
 
+  #hc,#dc{ display:none; }
+  body{ background:var(--ink); }
+
   /* ── BURGER BUTTON ── */
   #mob-burger{
     display:flex; flex-direction:column; justify-content:center; gap:5px;
@@ -1523,7 +1526,7 @@ setTimeout(function(){var o=qs('.h-orn');if(o)o.classList.add('on');var c=qs('.h
       var W = canvas.offsetWidth, H = canvas.offsetHeight;
       ctx.clearRect(0, 0, W, H);
       if(!ready) return;
-      if(isMob){var _cr2=canvas.getBoundingClientRect();var _yOff=_s2fsPx*0.;CD.forEach(function(cd){var _r2=cd.el.getBoundingClientRect();cd.top=_r2.top-_cr2.top+_yOff;cd.left=_r2.left-_cr2.left;});}
+      {var _cr2=canvas.getBoundingClientRect();CD.forEach(function(cd){var _r2=cd.el.getBoundingClientRect();cd.top=_r2.top-_cr2.top;cd.left=_r2.left-_cr2.left;});}
 
       var rv = getRevealX();
       var rx = rv.x, rl = rv.l;
@@ -2959,7 +2962,7 @@ function s5PlayTitle(i,easeType,onComplete){
     /* sine ease-in/out — vitesses identiques à la jonction (π/2), transition parfaitement fluide */
     var pe; if(easeType==='in'){pe=1-Math.cos(p*Math.PI/2);}else{pe=Math.sin(p*Math.PI/2);}
     s5TcT[i]+=0.013; var t5=s5TcT[i];
-    if(window.innerWidth<=768){var _cr5l=cv5.getBoundingClientRect();var _yo5=_fs5*0.035;TCD5.forEach(function(cd){var _r=cd.el.getBoundingClientRect();cd.top=_r.top-_cr5l.top+_yo5;cd.left=_r.left-_cr5l.left;});}
+    {var _cr5l=cv5.getBoundingClientRect();TCD5.forEach(function(cd){var _r=cd.el.getBoundingClientRect();cd.top=_r.top-_cr5l.top;cd.left=_r.left-_cr5l.left;});}
     ctx5.clearRect(0,0,cv5.width,cv5.height);
     if(TNC5<1){if(p>=1)revealWords(i);else s5TcRaf[i]=requestAnimationFrame(frame5);return;}
     var l5L=TCD5[0].left,l5R=TCD5[TNC5-1].left+TCD5[TNC5-1].w;
