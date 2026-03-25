@@ -614,7 +614,7 @@ body{background:var(--ink);color:var(--parch);font-family:var(--f);font-weight:3
 
 @media (max-width:768px){
 
-  #hc,#dc{ display:none; }
+  #dc{ display:none; }
   body{ background:var(--ink); }
 
   /* ── BURGER BUTTON ── */
@@ -1526,7 +1526,7 @@ setTimeout(function(){var o=qs('.h-orn');if(o)o.classList.add('on');var c=qs('.h
       var W = canvas.offsetWidth, H = canvas.offsetHeight;
       ctx.clearRect(0, 0, W, H);
       if(!ready) return;
-      {var _cr2=canvas.getBoundingClientRect();CD.forEach(function(cd){var _r2=cd.el.getBoundingClientRect();cd.top=_r2.top-_cr2.top;cd.left=_r2.left-_cr2.left;});}
+      {var _cr2=canvas.getBoundingClientRect();var _cr2t=Math.abs(_cr2.top)<2?0:_cr2.top;var _cr2l=Math.abs(_cr2.left)<2?0:_cr2.left;CD.forEach(function(cd){var _r2=cd.el.getBoundingClientRect();cd.top=_r2.top-_cr2t;cd.left=_r2.left-_cr2l;});}
 
       var rv = getRevealX();
       var rx = rv.x, rl = rv.l;
